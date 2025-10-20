@@ -23,7 +23,7 @@ try {
 
 // CORS when consuming Medusa from admin
 const ADMIN_CORS =
-  process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001";
+  process.env.ADMIN_CORS || "http://localhost:9000,http://localhost:9001";
 
 // CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
@@ -64,7 +64,7 @@ const plugins = [
 ];
 
 const modules = {
-  /*eventBus: {
+  eventBus: {
     resolve: "@medusajs/event-bus-redis",
     options: {
       redisUrl: REDIS_URL
@@ -75,17 +75,7 @@ const modules = {
     options: {
       redisUrl: REDIS_URL
     }
-  },*/
-  "@medusajs/admin-sdk": "2.7.1",
-  "@medusajs/cli": "2.7.1",
-  "@medusajs/framework": "2.7.1",
-  "@medusajs/medusa": "2.7.1",
-  "@mikro-orm/core": "6.4.3",
-  "@mikro-orm/knex": "6.4.3",
-  "@mikro-orm/migrations": "6.4.3",
-  "@mikro-orm/postgresql": "6.4.3",
-  "awilix": "^8.0.1",
-  "pg": "^8.13.0"
+  },
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
@@ -96,7 +86,7 @@ const projectConfig = {
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
   // Uncomment the following lines to enable REDIS
-  // redis_url: REDIS_URL
+  redis_url: REDIS_URL
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule} */

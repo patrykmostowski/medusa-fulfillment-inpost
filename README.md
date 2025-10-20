@@ -1,5 +1,7 @@
 ![Medusa Fulfillment InPost made by SpearDevs](https://github.com/user-attachments/assets/11785778-ce08-44b3-a769-f6da98c71704)
 
+## THIS IS A FORK OF THE SPAREDEVS REPO WITH V2 MEDUSA SUPPORT, DOWNLOAD AT YOUR OWN RISK, I DO NOT OWN THE CODE I ONLY MODIFIED IT SLIGHLTY BECAUSE I CANT WAIT FOR PR AND IM TOO LAZY TO MAKE IT PRIVATE
+
 ## Caution is advised when deploying this plugin in production, as it is in the MVP stage. While stable, ongoing improvements may be in progress.
 
 # Inpost Fulfillment
