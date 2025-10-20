@@ -11,7 +11,19 @@ const loaders = require("@medusajs/medusa/dist/loaders/index").default
     try {
       const { container } = await loaders({
         directory,
-        expressApp: app
+        expressApp: app,
+        dependencies: {
+          "@medusajs/admin-sdk": "2.7.1",
+          "@medusajs/cli": "2.7.1",
+          "@medusajs/framework": "2.7.1",
+          "@medusajs/medusa": "2.7.1",
+          "@mikro-orm/core": "6.4.3",
+          "@mikro-orm/knex": "6.4.3",
+          "@mikro-orm/migrations": "6.4.3",
+          "@mikro-orm/postgresql": "6.4.3",
+          "awilix": "^8.0.1",
+          "pg": "^8.13.0"
+        }
       })
       const configModule = container.resolve("configModule")
       const port = process.env.PORT ?? configModule.projectConfig.port ?? 9000

@@ -51,6 +51,16 @@ const plugins = [
       },
     },
   },
+  {
+    resolve: `medusa-fulfillment-inpost`,
+    options: {
+      enableUI: true,
+      base_url: process.env.INPOST_BASE_URL, // required
+      token: process.env.INPOST_TOKEN, // required
+      organization_id: process.env.INPOST_ORGANIZATION_ID, // required
+      default_template: process.env.INPOST_DEFAULT_TEMPLATE, // default: medium, size of the package
+    },
+  },
 ];
 
 const modules = {
@@ -66,6 +76,16 @@ const modules = {
       redisUrl: REDIS_URL
     }
   },*/
+  "@medusajs/admin-sdk": "2.7.1",
+  "@medusajs/cli": "2.7.1",
+  "@medusajs/framework": "2.7.1",
+  "@medusajs/medusa": "2.7.1",
+  "@mikro-orm/core": "6.4.3",
+  "@mikro-orm/knex": "6.4.3",
+  "@mikro-orm/migrations": "6.4.3",
+  "@mikro-orm/postgresql": "6.4.3",
+  "awilix": "^8.0.1",
+  "pg": "^8.13.0"
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */

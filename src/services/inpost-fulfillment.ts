@@ -8,6 +8,17 @@ import {
 } from "@medusajs/medusa"
 import { CreateReturnType } from "@medusajs/medusa/dist/types/fulfillment-provider"
 import InpostClient from "../utils/inpost-client"
+import { 
+  AdminGetOrdersParams, 
+  AdminPostOrdersOrderFulfillmentsReq, 
+  AdminPostOrdersOrderReq, 
+  AdminPostOrdersOrderReturnsReq 
+} from "@medusajs/admin-sdk"
+import { MikroORM, EntityManager } from "@mikro-orm/core"
+import { Migration } from "@mikro-orm/migrations"
+import { PostgresDriver } from "@mikro-orm/postgresql"
+import { AwilixContainer } from "awilix"
+import { Client } from "pg"
 
 class InpostFulfillmentService extends AbstractFulfillmentService {
   static identifier = "inpost";
